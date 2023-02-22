@@ -72,6 +72,7 @@ public class SwiftTwitterLoginPlugin: NSObject, FlutterPlugin, ASWebAuthenticati
     
     @available(iOS 12.0, *)
     public func presentationAnchor(for session: ASWebAuthenticationSession) -> ASPresentationAnchor {
-        return UIApplication.shared.delegate!.window!!
+        return UIApplication.shared.windows.first!
+
     }
 }
